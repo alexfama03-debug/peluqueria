@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbería Moderna</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+    background:#000;
+}
+
+nav h2{
+    color:#f1c40f;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    background:url("https://cdn.pixabay.com/photo/2023/09/15/04/25/clipper-8254064_1280.jpg") center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background-blend-mode: darken;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    margin:15px 0;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#f1c40f;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* SERVICIOS */
+.servicios{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.reservas{
+    padding:80px 20px;
+    text-align:center;
+    background:#1a1a1a;
+}
+
+.reservas form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:400px;
+    margin:auto;
+}
+
+.reservas input{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+
+.reservas button{
+    padding:12px;
+    border:none;
+    background:#f1c40f;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#1e1e1e;
+    padding:30px;
+    width:250px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#f1c40f;
+}
+
+/* galeria */
+.galeria{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.imagenes{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.imagenes img{
+    width:250px;
+    border-radius:10px;
+}
+
+/* reserva */
+.reservas{
+    padding:80px 20px;
+    text-align:center;
+    background:#1a1a1a;
+}
+
+.reservas form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:400px;
+    margin:auto;
+}
+
+.reservas input{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+
+.reservas button{
+    padding:12px;
+    border:none;
+    background:#f1c40f;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* whatsapp */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    font-size:30px;
+    width:60px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#000;
+    margin-top:50px;
+}
+</style>
+</head>
+
+<a href="https://wa.me/18293524521" class="whatsapp" target="_blank">
+💬
+</a>
+
+<script>
+document.getElementById("formReserva").addEventListener("submit", function(e){
+e.preventDefault();
+
+let nombre = this.elements[0].value;
+let fecha = this.elements[1].value;
+let hora = this.elements[2].value;
+
+let mensaje = `Hola, quiero reservar una cita.\nNombre: ${nombre}\nFecha: ${fecha}\nHora: ${hora}`;
+
+let url = "https://wa.me/18093524521?text=" + encodeURIComponent(mensaje);
+
+window.open(url, "_blank");
+});
+</script>
+
+<body>
+
+<nav>
+<h2>Barbería Moderna</h2>
+<ul>
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Servicios</a></li>
+<li><a href="#">Contacto</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Cortes Clásicos y Modernos</h1>
+<p>La mejor barbería de Santiago, RD</p>
+<button>Agendar Cita</button>
+</section>
+
+<section class="servicios">
+<h2>Nuestros Servicios</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Corte Clásico</h3>
+<p>RD$300</p>
+</div>
+
+<div class="card">
+<h3>Fade</h3>
+<p>RD$400</p>
+</div>
+
+<div class="card">
+<h3>Barba</h3>
+<p>RD$200</p>
+</div>
+</div>
+</section>
+
+<section class="galeria">
+<h2>Nuestros Trabajos</h2>
+<div class="imagenes">
+<img src="recortada.jpg">
+<img src="afeitada.jpg">
+<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a">
+</div>
+</section>
+
+<section class="reservas">
+<h2>Reservar Cita</h2>
+
+<form id="formReserva">
+<input type="text" placeholder="Tu nombre" required>
+<input type="date" required>
+<input type="time" required>
+<button type="submit">Reservar por WhatsApp</button>
+</form>
+
+<p id="mensaje"></p>
+</section>
+
+<footer>
+<p>📍 Santiago, RD | 📞 809-000-0000</p>
+</footer>
+
+</body>
+</html>

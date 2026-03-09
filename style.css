@@ -1,0 +1,21 @@
+body {
+    font-family: arial;
+    margin: 0;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 40px;
+    background: black;
+}
+
+.servicios, .contacto {
+    padding: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
